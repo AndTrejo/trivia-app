@@ -4,6 +4,7 @@ import useAPI from '@/composables/useAPI';
 import { useRoute } from 'vue-router';
 import BaseTitle from '@/components/BaseTitle.vue';
 import DifficultyChip from '@/components/DifficultyChip.vue';
+import MainScore from '@/components/MainScore.vue';
 
 const api = useAPI()
 const question = ref(null)
@@ -60,7 +61,7 @@ const shuffle = (array) => {
 
 
 <div v-if="question" class="flex h-full w-full flex-col items-center gap-8">
-<BaseTitle>{{ question.category }}</BaseTitle>
+<BaseTitle>{{ question.category }} - <MainScore></MainScore></BaseTitle>
 <!-- {{ question.question }} -->
 
 
